@@ -1,0 +1,178 @@
+@font-face {
+  font-family: RobotoBold;
+  src: url('../assets/fonts/Roboto-Bold.ttf');
+}
+@font-face {
+  font-family: RobotoRegular;
+  src: url('../assets/fonts/Roboto-Regular.ttf');
+}
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --DarkSlateGrey: hsl(234, 29%, 20%);
+  --CharcoalGrey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  font-family: RobotoRegular;
+  background-color: var(--DarkSlateGrey);
+}
+
+.mainComponent {
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100dvh;
+  max-width: 375px;
+  margin: auto;
+  background-color: var(--White);
+}
+#desktopImage {
+  display: none;
+}
+.mainComponentContent {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 375px;
+}
+.mainComponentContent h1 {
+  font-size: 2.4rem;
+  color: var(--CharcoalGrey);
+  font-family: RobotoBold;
+}
+.mainComponentContent p {
+  line-height: 1.5rem;
+}
+.mainComponentList {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+}
+.mainComponentList li {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.mainComponentList img {
+  width: fit-content;
+  height: fit-content;
+}
+.mainComponentForm {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+}
+.mainComponentForm label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: RobotoBold;
+  font-size: 12px;
+  color: var(--CharcoalGrey);
+}
+.mainComponentForm label span {
+  display: none;
+  color: var(--Tomato);
+  font-size: 12px;
+}
+.mainComponentForm input {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 16px;
+  border: solid var(--Grey) 1px;
+  background-color: white;
+}
+.mainComponentForm button {
+  background-color: var(--DarkSlateGrey);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 16px;
+  font-family: RobotoBold;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+.thanksComponent {
+  display: none;
+  grid-template-rows: 1fr 1fr;
+  max-width: 375px;
+  margin: auto;
+  padding: 2rem;
+  min-height: 100dvh;
+  background-color: var(--White);
+}
+.thanksComponentContent {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.5rem;
+  place-self: end;
+}
+.thanksComponentContent img {
+  width: 3rem;
+}
+.thanksComponentContent h1 {
+  font-size: 2rem;
+  font-family: RobotoBold;
+  color: var(--CharcoalGrey);
+  line-height: 2rem;
+}
+.thanksComponentContent p {
+  line-height: 1.5rem;
+}
+.thanksComponent button {
+  background-color: var(--DarkSlateGrey);
+  border: none;
+  color: white;
+  padding: 1rem;
+  font-size: 16px;
+  font-family: RobotoBold;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: fit-content;
+  place-self: end;
+}
+button {
+  cursor: pointer;
+  transition: ease-in-out 150ms;
+}
+button:hover {
+  background-color: var(--Tomato);
+}
+@media only screen and (min-width: 820px) {
+  .component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .mainComponent {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 850px;
+    min-height: fit-content;
+    border-radius: 1rem;
+    padding: 0.9rem;
+  }
+  #mobileImage {
+    display: none;
+  }
+  #desktopImage {
+    display: flex;
+  }
+  .thanksComponent {
+    min-height: fit-content;
+    grid-template-rows: fit-content(8ch) fit-content(8ch);
+    gap: 2rem;
+    border-radius: 1rem;
+    padding: 3rem;
+  }
+}
