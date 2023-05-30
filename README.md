@@ -18,7 +18,7 @@ Desktop View
 
 - Source Code: https://github.com/Phol16/NewsLetter_Signup_Form
 
-- Live Site: 
+- Live Site: https://phol16.github.io/NewsLetter_Signup_Form/
 
 ### My process
 
