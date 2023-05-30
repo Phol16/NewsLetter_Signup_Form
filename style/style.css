@@ -147,7 +147,7 @@ button {
 button:hover {
   background-color: var(--Tomato);
 }
-@media only screen and (min-width: 820px) {
+@media only screen and (min-width: 1000px) {
   .component {
     display: flex;
     justify-content: center;
@@ -157,10 +157,15 @@ button:hover {
   .mainComponent {
     display: flex;
     flex-flow: row wrap;
-    max-width: 850px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
     min-height: fit-content;
     border-radius: 1rem;
     padding: 0.9rem;
+  }
+  .mainComponentContent{
+    margin: 0 4rem;
   }
   #mobileImage {
     display: none;
